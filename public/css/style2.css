@@ -1,0 +1,35 @@
+.two {
+    background-image: url(https://i.pinimg.com/474x/0d/30/96/0d3096b0e1712878898e79f326c79395--gucci-flora.jpg);
+    padding: 50px 20px;
+    text-align: center;
+}
+.two h1 {
+    font-family: 'Righteous', cursive;
+    position: relative;
+    color: #3CA1D9;
+    display: inline-block;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    font-size: 3em;
+    padding: 11px 60px;
+    margin: 0;
+    line-height: 1;
+}
+.two h1:before, .two h1:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    background: repeating-linear-gradient(180deg, transparent, transparent 2px, #3CA1D9 2px, #3CA1D9 4px);
+}
+.two h1:before {left: 0;}
+.two h1:after {right: 0;}
+@media (max-width: 420px) {
+    .two h1 {font-size: 2em;}
+}
+
+
+

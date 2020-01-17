@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block title %}Hello SecurityController!{% endblock %}
+
+{% block body %}
+<div class="vladmaxi-top">
+        <a href="{{ path('logout') }}">Logout</a>
+        <a href="http://142.93.111.202:8888/main">Main page</a>
+    <div class="clr"></div>
+    </div>
+
+
+{% if error %}
+<span class="error">{{ error.messageKey }}</span>
+{% endif %}
+<div id="login-form">
+  <h1>АВТОРИЗАЦИЯ</h1>
+    <fieldset>
+<form action="{{ path('login') }}" method="POST">
+
+<input type="login" name="_username" value="{{ last_username }}" placeholder="username">
+
+<input type="password" name="_password" placeholder="password">
+
+<input type="submit" value="LOGIN"></button>
+
+
+</form>
+</fieldset>
+</div>
+
+{% endblock %}

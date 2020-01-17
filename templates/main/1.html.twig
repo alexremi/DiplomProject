@@ -1,0 +1,161 @@
+{% extends 'base.html.twig' %}
+
+        {% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{asset('css/style2.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/animate.css')}}">
+
+    <style type="text/css">
+    div{
+        font-family: 'Fjalla One', sans-serif;
+    }
+    li {
+        font-family: 'Fjalla One', sans-serif;
+        background: rgba(0,170,238,0.5);
+    }
+    body{
+        width: 100%;
+        position: relative;
+        background-size: cover;
+        height: auto;
+    }
+</style>
+{% endblock %}
+
+
+
+
+{% block javascripts %}
+    <script src="{{asset('js/wow.min.js')}}"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+<script>
+
+    showContent('http:\\142.93.111.202/farfor') // страница по умолчанию
+</script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+{%  endblock %}
+
+
+
+
+{% block content %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{% block title %}WELCOME{% endblock %}</title>
+</head>
+
+        {% block body %}
+<div class="two" >
+    <button type="button" class="btn btn-danger " data-toggle="modal" data-target="#exampleModal1">Contact us</button>
+    <a href="http://142.93.111.202:8888/adminpage" ><button type="button" class="btn btn-danger mr-5 btn-lg">Authorization</button></a>
+
+        <h1>WELCOME</h1></div>
+<br>
+<div class="col-md-12 text-center center-block">
+<a href="http://142.93.111.202:8888/product/product1/"><button type="button" class="btn btn-danger mr-5 btn-lg">Ceramic residues</button></a>
+<a href="http://142.93.111.202:8888/farfor/farfor1/"><button type="button" class="btn btn-danger mr-5 btn-lg">Porcelain residues</button></a>
+<a href="#" onClick="showContent('pod3.html')"><button type="button" class="btn btn-danger mr-5 btn-lg">Scyphuses</button></a>
+</div>
+    <div id="content">
+    <!-- CONTENT -->
+</div>
+<!--//-->
+<div id="loading" style="display: none">
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Authorization</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form>
+                        <div class="form-froup">
+                            <label for="exampleInputLogin">Login</label>
+                            <input type="login" class="form-control" id="exampleInputLogin" aria-describedby="loginHelp" placeholder="Login" required>
+                            <small id="loginHelp" class="form-text text-muted">Insert login</small>
+                        </div>
+                        <div class="form-froup">
+                            <label for="exampleInputPass">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPass" placeholder="Password" required>
+                            <small id="passHelp" class="form-text text-muted">Insert password</small>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input">
+                                Remember me
+                            </label>
+                        </div>
+
+                            <a href="index.html">
+                                Sign in
+                            </a>
+                    </form>
+                </div>
+            </div>
+            </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel1">Contact us</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form action="submit.php" method="post">
+
+                        <div class="form-froup">
+                            <label for="exampleInputPass">Email</label>
+                            <input type="email" class="form-control" id="exampleInputPass1" placeholder="Email" required>
+                            <small id="passHelp1" class="form-text text-muted">Insert email</small>
+                        </div>
+
+                        <div class="form-froup">
+                            <label for="exampleInputLogin">Login</label>
+                            <input type="login" class="form-control" id="exampleInputLogin1" aria-describedby="loginHelp" placeholder="Login" required>
+                            <small id="loginHelp1" class="form-text text-muted">Insert login</small>
+                        </div>
+
+                        <div class="form-froup">
+                            <label for="exampleInputPass">Message</label>
+                            <input type="text" class="form-control" id="exampleInputText1" placeholder="Text" required>
+                            <small id="textHelp1" class="form-text text-muted">Insert text message</small>
+                        </div>
+
+                        <input type="submit" class="btn btn-success" value="Send">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container p-5">
+
+    </li>
+    </ul>
+</div>
+
+
+
+{% endblock %}
+{% endblock %}

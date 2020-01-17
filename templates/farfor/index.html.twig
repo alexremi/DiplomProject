@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Farfor index{% endblock %}
+
+{% block body %}
+    <h1>Farfor index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Description</th>
+	        <th>Category</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for farfor in farfors %}
+            <tr>
+                <td>{{ farfor.id }}</td>
+                <td>{% for image in farfor.images %}
+        <img src="{{ asset(image.path) }}" alt="" width = 90 height = 90>
+   {%  endfor %}</td>
+                <td>{{ farfor.name }}</td>
+                <td>{{ farfor.description }}</td>
+		<td>{{ farfor.farforCategory }}</td>
+                <td>
+                    <a href="{{ path('farfor_show', {'id': farfor.id}) }}">show</a>
+                    <a href="{{ path('farfor_edit', {'id': farfor.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+  
+    <a href="{{ path('farfor_new') }}">Create new</a>
+{% endblock %}
